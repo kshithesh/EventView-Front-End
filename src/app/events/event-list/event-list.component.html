@@ -1,0 +1,30 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Events List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th hidden>Event ID</th>
+            <th>Full Name</th>
+            <th>EventType</th>
+            <th>Event Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let events of eventsCustom | async">
+            <td hidden>{{events.eventId}}</td>
+            <td>{{events.fullName}}</td>
+            <td>{{events.eventType}}</td>
+            <td>{{events.eventDate}}</td>
+            <td><button (click)="eventDetails(events.eventId)" class="btn btn-light">View</button>
+                <button (click)="updateEvent(events.eventId)" class="btn btn-info" style="margin-left: 10px">Edit</button>
+                <button (click)="deleteEvent(events.eventId)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    <button (click)="createEvent()" class="btn btn-success">Add Event</button>
+    </div>
+  </div>

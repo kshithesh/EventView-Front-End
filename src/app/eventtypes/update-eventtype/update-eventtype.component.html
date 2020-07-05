@@ -1,0 +1,14 @@
+<h3>Update EventType</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name" hidden>EventTypeId</label>
+      <input type="text" class="form-control" id="EventTypeId" required [(ngModel)]="eventType.eventTypeId" name="eventTypeId" hidden>
+    </div>
+
+    <div class="form-group">
+        <label for="name">EventType</label>
+        <input type="text" class="form-control" id="eventType" required [(ngModel)]="eventType.eventType" name="eventType">
+      </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>

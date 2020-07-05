@@ -1,0 +1,15 @@
+<h2>EventType Details</h2> 
+
+<hr/>
+<div *ngIf="eventTypes">
+  <div>
+    <label><b>EventType ID: </b></label> {{eventTypes.eventTypeId}}
+  </div>
+  <div>
+    <label><b>EventType: </b></label> {{eventTypes.eventType}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to EventTypes List</button><br>

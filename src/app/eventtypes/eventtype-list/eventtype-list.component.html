@@ -1,0 +1,26 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>EventTypes List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th hidden>EventType ID</th>
+            <th>EventType</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let eventType of eventTypes | async">
+            <td hidden>{{eventType.eventTypeId}}</td>
+            <td>{{eventType.eventType}}</td>
+            <td><button (click)="eventTypeDetails(eventType.eventTypeId)" class="btn btn-light">View</button>
+                <button (click)="updateEventType(eventType.eventTypeId)" class="btn btn-info" style="margin-left: 10px">Edit</button>
+                <button (click)="deleteEventType(eventType.eventTypeId)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    <button (click)="createEventType()" class="btn btn-success">Add EventType</button>
+    </div>
+  </div>

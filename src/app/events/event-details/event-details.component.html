@@ -1,0 +1,21 @@
+<h2>Events Details</h2> 
+
+<hr/>
+<div *ngIf="eventsCustom">
+  <div>
+    <label><b>Event ID: </b></label> {{eventsCustom.eventId}}
+  </div>
+  <div>
+    <label><b>Full Name: </b></label> {{eventsCustom.fullName}}
+  </div>
+  <div>
+    <label><b>EventType: </b></label> {{eventsCustom.eventType}}
+  </div>
+  <div>
+    <label><b>Event Date: </b></label> {{eventsCustom .eventDate}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Events List</button><br>
